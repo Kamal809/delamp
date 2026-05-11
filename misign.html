@@ -4,50 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-body{
-    padding-left: 10px;
-}
- /* HEADER */
+   <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-header{
-    width:100%;
-    background:#ffffff;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
 
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#0d9488;
-}
+    body{
+      background:#f7fafc;
+      color:#222;
+      line-height:1.6;
+    }
 
-nav a{
-    text-decoration:none;
-    color:#333;
-    margin-left:25px;
-    font-weight:500;
-    transition:0.3s;
-}
+    html{
+      scroll-behavior:smooth;
+    }
 
-nav a:hover{
-    color:#0d9488;
-}
+    /* HEADER */
+    header{
+      width:100%;
+      background:#ffffff;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#0d9488;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#333;
+      margin-left:25px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#0d9488;
+    }
 .signup-form{
-    padding-left: 20px;
+    padding-left: 50px;
 }
         /* Form Titles */
 .form-title{
@@ -80,17 +90,30 @@ nav a:hover{
 .input-box input:focus{
     border:2px solid #005792;
 }
-.male{
-    font-family: 'poppins', sans-serif;
+.input-box select{
+    width:30%;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    padding:14px;
+    border:none;
+    outline:none;
+    background:#f1f1f1;
+    border-radius:10px;
+    font-size:15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.input-box select:focus{
+    border:2px solid #005792;
+}
+.input-box label{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
     color: rgb(35, 36, 36);
     padding-left: 15px;
     cursor: pointer;
 }
-.male input{
-    margin-top: 15px;
-}
 /* Button */
-button{
+.button{
     width:40%;
     padding:14px;
     border:none;
@@ -101,15 +124,26 @@ button{
     font-weight:600;
     cursor:pointer;
     transition:0.3s;
+    text-decoration: none;
 }
 
-button:hover{
+.button:hover{
     background:darkgreen;
     transform:scale(1.02);
 }
+/* FOOTER */
+    footer{
+      background:#0f172a;
+      color:#cbd5e1;
+      text-align:center;
+      padding:30px 8%;
+    }
 
-
- @media(max-width:768px){
+    footer p{
+      margin:8px 0;
+    }
+/* RESPONSIVE */
+    @media(max-width:768px){
 
       header{
         flex-direction:column;
@@ -122,15 +156,24 @@ button:hover{
       nav a{
         margin:0 10px;
       }
- }
+      .input-box input{
+        width:80%;
+      }
+      .input-box select{
+        width:62%;
+      }
+      .button{
+        width:80%;
+        margin-left: 150px;
+      }
+    }
+
     </style>
 </head>
 <body>
     <!-- HEADER -->
-
   <header>
-
-    <div class="logo">💡 DELAMP Foundation</div>
+    <div class="logo"> 💡 DELAMP Foundation</div>
 
     <nav>
       <a href="index.html">Home</a>
@@ -138,7 +181,6 @@ button:hover{
       <a href="delempmission.html">Mission</a>
       <a href="delampcontact.html">Contact</a>
     </nav>
-
   </header>
     <!-- Signup Form -->
         <div class="signup-form">
@@ -163,15 +205,22 @@ button:hover{
                 <div class="input-box">
                     <input type="password" placeholder="Confirm Password" required>
                 </div>
-                <div class="male">
-                <label>Gender:</label> <br>
-                <input type="radio" name="Gender" id="Gender">Male <br>
-                <input type="radio" name="Gender" id="Gender">Female <br><br>
-                </div>
-                <a href="index.html">Create Account</a>
-
+                <div class="input-box">
+            <label>Gender</label>
+            <select>
+              <option>Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+                <a href="index.html" class="button"> Create Account</a>
             </form>
 
-        </div>
+        </div> <br>
+        <!-- FOOTER -->
+  <footer>
+    <p>© 2026 DELAMP Foundation. All Rights Reserved.</p>
+    <p>Education • Health • Social Development</p>
+  </footer>
 </body>
 </html>

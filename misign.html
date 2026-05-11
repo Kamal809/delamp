@@ -14,6 +14,38 @@
 body{
     padding-left: 10px;
 }
+ /* HEADER */
+
+header{
+    width:100%;
+    background:#ffffff;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#0d9488;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#0d9488;
+}
 .signup-form{
     padding-left: 20px;
 }
@@ -76,22 +108,38 @@ button:hover{
     transform:scale(1.02);
 }
 
-/* Switch Text */
-.switch{
-    text-align:left;
-    padding-left: 150px;
-    margin-top:20px;
-    font-size:14px;
-}
 
-.switch a{
-    color:#138134;
-    font-weight:600;
-    text-decoration:none;
-}
+ @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      nav a{
+        margin:0 10px;
+      }
+ }
     </style>
 </head>
 <body>
+    <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">💡 DELAMP Foundation</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="delampabout.html">About</a>
+      <a href="delempmission.html">Mission</a>
+      <a href="delampcontact.html">Contact</a>
+    </nav>
+
+  </header>
     <!-- Signup Form -->
         <div class="signup-form">
 
@@ -120,14 +168,8 @@ button:hover{
                 <input type="radio" name="Gender" id="Gender">Male <br>
                 <input type="radio" name="Gender" id="Gender">Female <br><br>
                 </div>
-                <a href="index.html">
-                <button type="submit">Create Account</button>
-                </a>
+                <a href="index.html">Create Account</a>
 
-                <div class="switch">
-                    Already have an account?
-                        <a href="minsignup.html">Login</a>
-                </div>
             </form>
 
         </div>

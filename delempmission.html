@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission - DELAMP Foundation</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f8fafc;
+      color:#222;
+      line-height:1.7;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      background:#ffffff;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#0d9488;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#333;
+      margin-left:25px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#0d9488;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      height:75vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+      url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content{
+      max-width:750px;
+      animation:fadeIn 1.2s ease;
+    }
+
+    .hero-content h1{
+      font-size:58px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:18px;
+      color:#f1f1f1;
+    }
+
+    /* MISSION SECTION */
+
+    .mission{
+      padding:100px 8%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+      background:white;
+    }
+
+    .mission img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      transition:0.4s;
+    }
+
+    .mission img:hover{
+      transform:scale(1.03);
+    }
+
+    .mission-text h2{
+      font-size:42px;
+      margin-bottom:20px;
+      color:#0f172a;
+    }
+
+    .mission-text p{
+      margin-bottom:18px;
+      color:#475569;
+      font-size:17px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:14px 30px;
+      background:#0d9488;
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.4s;
+    }
+
+    .btn:hover{
+      background:#0f766e;
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* VALUES SECTION */
+
+    .values{
+      padding:90px 8%;
+      background:#ecfeff;
+      text-align:center;
+    }
+
+    .values h2{
+      font-size:40px;
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .values p{
+      color:#64748b;
+      margin-bottom:50px;
+    }
+
+    .value-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .value-card{
+      background:white;
+      padding:35px 25px;
+      border-radius:18px;
+      transition:0.4s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .value-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      background:#ccfbf1;
+      margin:auto;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:30px;
+      margin-bottom:20px;
+    }
+
+    .value-card h3{
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .value-card p{
+      color:#475569;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:100px 8%;
+      text-align:center;
+      background:
+      linear-gradient(rgba(13,148,136,0.85), rgba(15,118,110,0.85)),
+      url('https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:white;
+    }
+
+    .cta h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:700px;
+      margin:auto;
+      margin-bottom:30px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0f172a;
+      color:#cbd5e1;
+      text-align:center;
+      padding:30px 8%;
+    }
+
+    footer p{
+      margin:8px 0;
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeIn{
+
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      nav a{
+        margin:0 10px;
+      }
+
+      .hero-content h1{
+        font-size:38px;
+      }
+
+      .mission-text h2,
+      .values h2,
+      .cta h2{
+        font-size:30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">💡 DELAMP Foundation</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="delampabout.html">About</a>
+      <a href="delempmission.html">Mission</a>
+      <a href="delampcontact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Our Mission</h1>
+
+      <p>
+        Building brighter futures through education, health support, and community development initiatives that transform lives.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- MISSION SECTION -->
+
+  <section class="mission" id="mission">
+
+    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop" alt="DELAMP Mission">
+
+    <div class="mission-text">
+
+      <h2>Empowering Communities For A Better Tomorrow</h2>
+
+      <p>
+        DELAMP Foundation exists to support individuals and communities by providing access to quality education, health awareness programs, and social development opportunities.
+      </p>
+
+      <p>
+        We are passionate about creating lasting change by helping young people achieve their educational dreams and supporting families through impactful community outreach initiatives.
+      </p>
+
+      <p>
+        Our mission is driven by compassion, leadership, and the belief that every person deserves the opportunity to succeed and live a better life.
+      </p>
+
+      <a href="#" class="btn">Support Our Mission</a>
+
+    </div>
+
+  </section>
+
+  <!-- VALUES SECTION -->
+
+  <section class="values">
+
+    <h2>Our Core Values</h2>
+
+    <p>
+      The principles that guide our foundation and community impact.
+    </p>
+
+    <div class="value-grid">
+
+      <div class="value-card">
+
+        <div class="icon">🎓</div>
+
+        <h3>Education</h3>
+
+        <p>
+          We believe education is the foundation for growth, empowerment, and opportunity.
+        </p>
+
+      </div>
+
+      <div class="value-card">
+
+        <div class="icon">❤️</div>
+
+        <h3>Compassion</h3>
+
+        <p>
+          We serve communities with care, empathy, and dedication to human development.
+        </p>
+
+      </div>
+
+      <div class="value-card">
+
+        <div class="icon">🌍</div>
+
+        <h3>Community</h3>
+
+        <p>
+          We work together to build stronger, healthier, and more united communities.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA SECTION -->
+
+  <section class="cta">
+
+    <h2>Join Us In Making A Difference</h2>
+
+    <p>
+      Together, we can inspire hope, empower lives, and create opportunities for future generations through education and social development.
+    </p>
+
+    <a href="#" class="btn">Get Involved</a>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 DELAMP Foundation. All Rights Reserved.</p>
+
+    <p>Education • Health • Social Development</p>
+
+  </footer>
+
+</body>
+</html>

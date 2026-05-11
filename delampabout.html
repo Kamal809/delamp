@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - DELAMP Foundation</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f8fafc;
+      color:#222;
+      line-height:1.7;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      background:#ffffff;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#0d9488;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#333;
+      margin-left:25px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#0d9488;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:70vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-size:55px;
+      margin-bottom:15px;
+      animation:fadeIn 1.2s ease;
+    }
+
+    .hero-content p{
+      max-width:700px;
+      margin:auto;
+      font-size:18px;
+      color:#f1f1f1;
+    }
+
+    /* ABOUT SECTION */
+
+    .about{
+      padding:90px 8%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+      background:white;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      transition:0.4s;
+    }
+
+    .about img:hover{
+      transform:scale(1.03);
+    }
+
+    .about-text h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color:#0f172a;
+    }
+
+    .about-text p{
+      margin-bottom:18px;
+      color:#475569;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:14px 30px;
+      background:#0d9488;
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.4s;
+    }
+
+    .btn:hover{
+      background:#0f766e;
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* MISSION SECTION */
+
+    .mission{
+      padding:90px 8%;
+      background:#ecfeff;
+      text-align:center;
+    }
+
+    .mission h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color:#0f172a;
+    }
+
+    .mission p{
+      max-width:850px;
+      margin:auto;
+      color:#475569;
+      font-size:17px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0f172a;
+      color:#cbd5e1;
+      text-align:center;
+      padding:30px 8%;
+    }
+
+    footer p{
+      margin:8px 0;
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      nav a{
+        margin:0 10px;
+      }
+
+      .hero-content h1{
+        font-size:38px;
+      }
+
+      .about-text h2,
+      .mission h2{
+        font-size:30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">💡 DELAMP Foundation</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="delampabout.html">About</a>
+      <a href="delempmission.html">Mission</a>
+      <a href="delampcontact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>About DELAMP Foundation</h1>
+
+      <p>
+        Empowering communities through education, health awareness, and social development programs that inspire positive change.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT SECTION -->
+
+  <section class="about" id="about">
+
+    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop" alt="About DELAMP Foundation">
+
+    <div class="about-text">
+
+      <h2>Who We Are</h2>
+
+      <p>
+        DELAMP Foundation is a dedicated non-profit organization committed to improving lives through education support, healthcare awareness, and community development initiatives.
+      </p>
+
+      <p>
+        We believe every child and individual deserves access to quality education, good health, and opportunities that help them build a better future.
+      </p>
+
+      <p>
+        Through outreach programs, partnerships, scholarships, and community engagement, we continue to impact lives positively across different communities.
+      </p>
+
+      <a href="#" class="btn">Learn More</a>
+
+    </div>
+
+  </section>
+
+  <!-- MISSION SECTION -->
+
+  <section class="mission" id="mission">
+
+    <h2>Our Mission</h2>
+
+    <p>
+      Our mission is to create lasting positive change by empowering individuals with educational opportunities, promoting healthy living, and supporting social development projects that strengthen communities and inspire hope for future generations.
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 DELAMP Foundation. All Rights Reserved.</p>
+
+    <p>Education • Health • Social Development</p>
+
+  </footer>
+
+</body>
+</html>

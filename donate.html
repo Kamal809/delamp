@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit</title>
+    <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#f7fafc;
+      color:#222;
+      line-height:1.6;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    /* HEADER */
+    header{
+      width:100%;
+      background:#ffffff;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#0d9488;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#333;
+      margin-left:25px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#0d9488;
+    }
+    /* TRANSACTION SECTION */
+    .tran{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        padding: 40px 8%;
+    }
+    /* right side  */
+    .med-1{
+        
+        background-color: #f7fafc;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .med-1:hover{
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        transform: translateY(-5px);
+    }
+    .med-1 h1{
+        color: #0e9c61;
+        margin-bottom: 20px;
+    }
+    .med-1 p{
+        color: #333;
+        line-height: 1.5;
+    }
+    
+    /* left side */
+    .med-2{
+        
+        background-color: #0e9c61;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .med-2:hover{
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        transform: translateY(-5px);
+    }
+    .med-2 h2{
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .med-2 p{
+        color: #fff;
+        line-height: 1.5;
+    }
+    .med-2 span{
+        display: block;
+        margin-top: 25px;
+        color: #fff;
+        font-weight: 600;
+    }
+    .plo p{
+        color: #fff;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    .plo strong{
+        color: #272424;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#0f172a;
+      color:#cbd5e1;
+      text-align:center;
+      padding:30px 8%;
+    }
+
+    footer p{
+      margin:8px 0;
+    }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+  <header>
+    <div class="logo"> 💡 DELAMP Foundation</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="delampabout.html">About</a>
+      <a href="delempmission.html">Mission</a>
+      <a href="delampcontact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="tran">
+    <div class="med-1">
+        <h1>Donate to DELAMP Foundation</h1>
+        <p>Your generous contribution helps us continue our mission to support education, health, and social development initiatives. Every donation makes a difference in the lives of those we serve.</p>
+    </div>
+    <div class="med-2">
+        <h2>How to Donate</h2>
+        <p>You can donate through our secure online platform or by contacting us directly. Your support is crucial in helping us create a brighter future for communities in need.</p>
+        <span>Or Make use of below details: 👇👇</span>
+        <div class="plo">
+            <p><strong>Bank Name:</strong> UBA Bank</p>
+            <p><strong>Account Name:</strong> DELAMP Foundation</p>
+            <p><strong>Account Number:</strong> 2110938022</p>
+        </div>
+    </div>
+  </div>
+  
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 DELAMP Foundation. All Rights Reserved.</p>
+    <p>Education • Health • Social Development</p>
+  </footer>
+</body>
+</html>
